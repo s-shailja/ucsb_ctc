@@ -1,0 +1,6 @@
+tifffile
+numpy
+scipy
+scikit-image
+keras
+tensorflow
