@@ -3,7 +3,7 @@
 We present a novel weakly supervised 3D nuclei segmentation method that consists of deep learning based nuclei detection, watershed segmentation, and a boundary correction algorithm using supervoxels. Additionally, we present a simple and efficient graph-based tracking algorithm utilizing relative nuclei location information extracted from the adjacency graph. 
 
 
-For more details about our methodology, please refer to our [paper](https://arxiv.org/abs/2010.13343)
+For more details about our methodology, please refer to our [paper](https://arxiv.org/abs/2010.13343).
 
 The performance of our proposed method on CTC 2020 dataset is shown in the following table:
 
