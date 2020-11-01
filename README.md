@@ -14,7 +14,7 @@ The performance of our proposed method on CTC 2020 dataset is shown in the follo
 
 ## Citation
 
-The system was employed for our research presented in [1], where we integrate . If the use of the software or the idea of the paper positively influences your endeavours, please cite [1].
+The system was employed for our research presented in [1], where we propose a novel semi supervised nuclei segmentation method utilizing Simple linear Iterative Clustering (SLIC) boundary adherence and a graph-based tracking algorithm utilizing relative cell location information. If the use of the software or the idea of the paper positively influences your endeavours, please cite [1].
 
 [1] **S. Shailja**, Jiaxiang Jiang, and B.S. Manjunath, "[Semi supervised segmentation and graph-based tracking of 3D nuclei in time-lapse microscopy.](https://arxiv.org/abs/2010.13343)"  Submitted to IEEE ISBI 2021.
 
