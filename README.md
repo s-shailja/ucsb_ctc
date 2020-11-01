@@ -24,7 +24,7 @@ The command
 
 `./Fluo-MDA231.sh indir outdirseg outdirtrack datatype`
 
-runs the segmentation and tracking pipeline on all tif stacks in `indir` and saves the label masks in `outdirseg` and `outdirtrack` respectively. The dataset can be passed through datatype argument
+runs the segmentation and tracking pipeline on all tif stacks in `indir` and saves the label masks in `outdirseg` and `outdirtrack` respectively. The dataset can be passed through datatype argument.
 
 
 ## Example usage
