@@ -22,15 +22,15 @@ The system was employed for our research presented in [1], where we propose a no
 
 The command 
 
-`./Fluo-MDA231.sh indir outdirseg outdirtrack`
+`./Fluo-MDA231.sh indir outdirseg outdirtrack datatype`
 
-runs the segmentation and tracking pipeline on all tif stacks in `indir` and saves the label masks in `outdirseg` and `outdirtrack` respectively.
+runs the segmentation and tracking pipeline on all tif stacks in `indir` and saves the label masks in `outdirseg` and `outdirtrack` respectively. The dataset can be passed through datatype argument
 
 
 ## Example usage
 
 
-`./Fluo-MDA231.sh ./01 ./01_RES_SEG ./01_RES_TRACK`
+`./Fluo.sh ./01 ./01_RES_SEG ./01_RES_TRACK "N3DCHCE`
 
 
 ```
