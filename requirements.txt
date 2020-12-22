@@ -4,3 +4,5 @@ scipy
 scikit-image
 keras
 tensorflow
+SimpleITK
+imagecodecs
