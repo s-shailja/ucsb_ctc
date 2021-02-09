@@ -58,11 +58,11 @@ def cell_center_fast(seg_img: np.ndarray, labels: np.ndarray) -> np.ndarray:
     results = {}
     for label in labels:
         if label != 0:
-            all_points_z,all_points_x,all_points_y = np.where(seg_img == label)
+            all_points_z, all_points_x, all_points_y = np.where(seg_img == label)
             avg_z = np.round(np.mean(all_points_z))
             avg_x = np.round(np.mean(all_points_x))
             avg_y = np.round(np.mean(all_points_y))
-            results[label]=[avg_z,avg_x,avg_y]
+            results[label] = [avg_z, avg_x, avg_y]
 
     return results
 
@@ -90,9 +90,9 @@ def compute_cell_location_fast(seg_img: np.ndarray, all_labels: np.ndarray) \
                     if i != j:
                         pos1 = centers[i]
                         pos2 = centers[j]
-                        distance = np.sqrt((pos1[0]-pos2[0])**2 +
-                                           (pos1[1]-pos2[1])**2 +
-                                           (pos1[2]-pos2[2])**2)
+                        distance = np.sqrt((pos1[0] - pos2[0])**2 +
+                                           (pos1[1] - pos2[1])**2 +
+                                           (pos1[2] - pos2[2])**2)
 
                         g.add_edge(i, j, weight=distance)
     return g
@@ -158,7 +158,7 @@ def tracklet_fast(g1: nx.Graph, g2: nx.Graph, seg_img1: np.ndarray, seg_img2: np
     for cell in inverse_dict_ass.keys():
         if len(inverse_dict_ass[cell]) > 1:
             for cellin2 in inverse_dict_ass[cell]:
-                maxtrackid = maxtrackid+1
+                maxtrackid = maxtrackid + 1
                 new_seg_img2[seg_img2 == cellin2] = maxtrackid
                 string = '{} {} {} {}'.format(maxtrackid, time+1, time+1, cell)
                 linelist.append(string)
@@ -168,7 +168,7 @@ def tracklet_fast(g1: nx.Graph, g2: nx.Graph, seg_img1: np.ndarray, seg_img2: np
             i = 0
 
             for line in linelist:
-                i = i+1
+                i = i + 1
                 if i == cell:
                     list_tmp = line.split()
                     new_string = '{} {} {} {}'.format(list_tmp[0], list_tmp[1],
@@ -219,7 +219,7 @@ def track_main_fast(seg_fold: str, track_fold: str):
 
             for label in labels:
                 img1[img1 == label] = start_label
-                start_label = start_label+1
+                start_label = start_label + 1
 
             img1 = sitk.GetImageFromArray(img1)
             sitk.WriteImage(img1, os.path.join(folder1, file1))
@@ -250,7 +250,7 @@ def track_main_fast(seg_fold: str, track_fold: str):
             if img2_label_counts[i, 1] < threshold:
                 img2[img2 == label] = 0
                 adjusted_labels_img2 = True
-            i = i+1
+            i = i + 1
 
         if adjusted_labels_img2:
             labels_img2 = compute_unique_vals(img2)
