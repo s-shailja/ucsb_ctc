@@ -50,7 +50,7 @@ def save_img_as_tiff(img_array: np.ndarray, filename: str, save_dir: str):
     sitk.WriteImage(img, os.path.join(save_dir, filename))
 
 
-def cell_center_fast(seg_img: np.ndarray, labels: np.ndarray) -> np.ndarray:
+def cell_center_fast(seg_img: np.ndarray, labels: np.ndarray) -> dict:
     """
     faster version of cell_center()
     speed gained by reusing previously calculated labels
