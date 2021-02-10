@@ -6,3 +6,4 @@ keras
 tensorflow
 SimpleITK
 imagecodecs
+pandas
